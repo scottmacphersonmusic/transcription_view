@@ -1,0 +1,6 @@
+<h1>Transcriptions</h1>
+<ul>
+  <% @transcriptions.each do |trans| %>
+    <em><%= trans.song_title %></em> ~ <%= trans.soloist %>
+  <% end %>
+</ul>
