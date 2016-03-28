@@ -1,9 +1,13 @@
 <%= link_to('View Full Screen',
-            pdfjs.full_path(file: image_path(@transcription.file_name)),
+            pdfjs.full_path(file: image_path(@transcription.pdf)),
             target: '_blank') %>
 
 <br>
 
-<iframe src='<%= pdfjs.minimal_path(file: image_path(@transcription.file_name)) %>'
+<%= audio_tag(@transcription.mp3, autoplay: true, controls: true, preload: 'auto') %>
+
+<br>
+
+<iframe src='<%= pdfjs.minimal_path(file: image_path(@transcription.pdf)) %>'
         width='700px' height='900px'>
 </iframe>
